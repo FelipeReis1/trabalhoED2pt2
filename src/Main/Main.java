@@ -9,7 +9,7 @@ package Main;
  *
  * @author Felipe
  */
-public class TrabalhoED2pt2 {
+public class Main {
 
     /**
      * @param args the command line arguments
