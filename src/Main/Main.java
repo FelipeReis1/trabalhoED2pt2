@@ -72,15 +72,18 @@ public class Main {
                 double y1;
 
                 System.out.println("Busca de Casos em Intervalo ");
-                System.out.println("Digite Valor de Xo, Yo");
 
-                x0 = scanner.nextDouble();
-                y0 = scanner.nextDouble();
+                System.out.println("Digite Valor de Xo");
+                x0 = Double.parseDouble(scanner.next());
 
-                System.out.println("Digite Valor de X1, Y1");
+                System.out.println("Digite Valor de Yo");
+                y0 = Double.parseDouble(scanner.next());
 
-                x1 = scanner.nextDouble();
-                y1 = scanner.nextDouble();
+                System.out.println("Digite Valor de X1");
+                x1 = Double.parseDouble(scanner.next());
+
+                System.out.println("Digite Valor de  Y1");
+                y1 = Double.parseDouble(scanner.next());
 
                 NoQuad pontoA = new NoQuad(x0, y0);
                 NoQuad pontoB = new NoQuad(x1, y1);
@@ -94,8 +97,9 @@ public class Main {
                 valores[4] = 1000000;
 
                 System.out.println("Inserções árvore AVL");
+                log += "Inserções árvore AVL\n\n";
                 for (int n : valores) {
-                    log += "Inserção de " + n + " valores\n";
+                    log += "Inserção de " + n + " valores\n\n";
                     double mediaTempoInsercao = 0;
                     double mediaTempoBuscas = 0;
                     double mediaComparacoes = 0;
@@ -103,34 +107,34 @@ public class Main {
                     for (int m = 0; m < 5; m++) {
                         ArvoreAvl arvoreAvlTeste = new ArvoreAvl();
                         long tempoBuscas, tempoInsercoes, tempoBuscasRegiao;
+                        
                         long startTimeIn = System.currentTimeMillis();
-
                         for (int id : tabelaHash.getIndicesAleatorios(n)) {
                             arvoreAvlTeste.inserir(id, tabelaHash.buscaHash(id).getCodCidade(), tabelaHash.buscaHash(id).getDtConfirmacao(), tabelaHash);
                         }
-
-                        log += "Inserções árvore AVL\n";
-                        log += "Inserção de " + n + " valores\n";
                         tempoInsercoes = System.currentTimeMillis() - startTimeIn;
-                        log += "Tempo de Inserções: " + tempoInsercoes + "\n";
 
-                        log += "Busca da cidade " + codCidade + " na árvore AVL\n";
+                        log += "--- Rodada de Inserção " + m + "---\n";
+
                         long startTimeBu = System.currentTimeMillis();
-                        log += "Total casos da nessa Cidade é " + arvoreAvl.getTotalCasosCidade(codCidade, tabelaHash) + "\n";
+                        log += "Busca da cidade " + codCidade + " na árvore AVL\n";
+                        log += "Total casos da nessa Cidade é " + arvoreAvl.getTotalCasosCidade(codCidade, tabelaHash) + "\n\n";
                         tempoBuscas = System.currentTimeMillis() - startTimeBu;
-                        log += "Tempo de Busca: " + tempoBuscas + "\n";
 
                         long startTimeS2 = System.currentTimeMillis();
                         log += "Busca de casos por região na árvore AVL\n";
-
                         int totalCasos = 0;
                         for (NoQuad no : saida) {
                             totalCasos += arvoreAvl.getTotalCasosCidade(no.getCodigoCidade(), tabelaHash);
                         }
+                        log += "Total casos da nessa Região é " + totalCasos + "\n\n";
                         tempoBuscasRegiao = System.currentTimeMillis() - startTimeS2;
-                        log += "Tempo de Busca por região: " + tempoBuscasRegiao + "\n";
+                        
+                        log += "Tempo de Inserções: " + (float) tempoInsercoes + "ms\n";
+                        log += "Tempo de Busca: " + (float)tempoBuscas + "ms\n";
+                        log += "Tempo de Busca por região: " + (float)tempoBuscasRegiao + "ms\n";
+                        log += "Número de Comparações: " + arvoreAvl.getComparacoes() + "\n\n";
                         log += "\n";
-                        log += "Número de Comparações: " + arvoreAvl.getComparacoes() + "\n";
 
                         mediaTempoInsercao += tempoInsercoes;
                         mediaTempoRegiao += tempoBuscasRegiao;
@@ -138,10 +142,15 @@ public class Main {
                         mediaComparacoes += arvoreAvl.getComparacoes();
 
                     }
+                    log += "Médias \n\n";
+
                     log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + "\n";
                     log += "Media de tempo de busca " + mediaTempoBuscas / 5 + "\n";
                     log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + "\n";
                     log += "Media de comparações " + mediaComparacoes / 5 + "\n";
+                    log += "\n\n";
+                    log += "___________________________________________";
+                    log += "\n\n";
 
                 }
 
@@ -260,7 +269,7 @@ public class Main {
 
         FileWriter fw = new FileWriter(file);
 
-        fw.write("Resultado dos experimentos\n");
+        fw.write("Resultado dos experimentos\n\n");
 
         fw.write(saida);
 
