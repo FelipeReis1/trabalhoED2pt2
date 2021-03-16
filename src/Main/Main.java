@@ -65,7 +65,7 @@ public class Main {
 //                System.out.println("Total casos da nessa Cidade é " + arvoreB.getTotalCasosCidade(313670, tabelaHash) );
 //            -------------TESTES------------------------------------------
 ////                S1
-                System.out.println("Digite o código da cidade:\n");
+                System.out.println("Digite o código da cidade: Ex: 355030 - São Paulo; 330455 - Rio de Janeiro\n");
                 int codCidade = scanner.nextInt();
 //
 ////                S2
