@@ -119,7 +119,7 @@ public class Main {
                         }
                         tempoInsercoes = System.currentTimeMillis() - startTimeIn;
 
-                        log += "--- Rodada de Inserção " + m + "---\n";
+                        log += "--- Rodada de Inserção " + (m + 1) + "---\n";
 
                         double startTimeBu = System.currentTimeMillis();
                         log += "Busca da cidade " + codCidade + " na árvore AVL\n";
@@ -135,9 +135,9 @@ public class Main {
                         log += "Total casos da nessa Região é " + totalCasos + "\n\n";
                         tempoBuscasRegiao = System.currentTimeMillis() - startTimeS2;
 
-                        log += "Tempo de Inserções: " + (float) tempoInsercoes + "ms\n";
-                        log += "Tempo de Busca: " + (float) tempoBuscas + "ms\n";
-                        log += "Tempo de Busca por região: " + (float) tempoBuscasRegiao + "ms\n";
+                        log += "Tempo de Inserções: " +  tempoInsercoes + " ms\n";
+                        log += "Tempo de Busca: " +  tempoBuscas + " ms\n";
+                        log += "Tempo de Busca por região: " + tempoBuscasRegiao + " ms\n";
                         log += "Número de Comparações: " + arvoreAvlTeste.getComparacoes() + "\n\n";
                         log += "\n";
 
@@ -145,13 +145,14 @@ public class Main {
                         mediaTempoRegiao += tempoBuscasRegiao;
                         mediaTempoBuscas += tempoBuscas;
                         mediaComparacoes += arvoreAvlTeste.getComparacoes();
-
+                        log += "------------------------------------\n";
                     }
+                    
                     log += "Médias \n\n";
 
-                    log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + "\n";
-                    log += "Media de tempo de busca " + mediaTempoBuscas / 5 + "\n";
-                    log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + "\n";
+                    log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + " ms\n";
+                    log += "Media de tempo de busca " + mediaTempoBuscas / 5 + " ms\n";
+                    log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + " ms\n";
                     log += "Media de comparações " + mediaComparacoes / 5 + "\n";
                     log += "\n\n";
                     log += "___________________________________________";
@@ -191,9 +192,9 @@ public class Main {
                         log += "Total casos da nessa Região é " + totalCasos + "\n\n";
                         tempoBuscasRegiao = System.currentTimeMillis() - startTimeS2;
 
-                        log += "Tempo de Inserções: " + tempoInsercoes + "ms\n";
-                        log += "Tempo de Busca: " + tempoBuscas + "ms\n";
-                        log += "Tempo de Busca por região: " + tempoBuscasRegiao + "ms\n";
+                        log += "Tempo de Inserções: " + tempoInsercoes + " ms\n";
+                        log += "Tempo de Busca: " + tempoBuscas + " ms\n";
+                        log += "Tempo de Busca por região: " + tempoBuscasRegiao + " ms\n";
                         log += "Número de Comparações: " + arvoreBTeste.getComparacoes() + "\n\n";
                         log += "\n";
 
@@ -206,9 +207,9 @@ public class Main {
                     }
                     log += "Médias \n\n";
 
-                    log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + "\n";
-                    log += "Media de tempo de busca " + mediaTempoBuscas / 5 + "\n";
-                    log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + "\n";
+                    log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + " ms\n";
+                    log += "Media de tempo de busca " + mediaTempoBuscas / 5 + " ms\n";
+                    log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + " ms\n";
                     log += "Media de comparações " + mediaComparacoes / 5 + "\n";
                     log += "\n\n";
                     log += "___________________________________________";
@@ -249,9 +250,9 @@ public class Main {
                         log += "Total casos da nessa Região é " + totalCasos + "\n\n";
                         tempoBuscasRegiao = System.currentTimeMillis() - startTimeS2;
 
-                        log += "Tempo de Inserções: " + tempoInsercoes + "ms\n";
-                        log += "Tempo de Busca: " + tempoBuscas + "ms\n";
-                        log += "Tempo de Busca por região: " + tempoBuscasRegiao + "ms\n";
+                        log += "Tempo de Inserções: " + tempoInsercoes + " ms\n";
+                        log += "Tempo de Busca: " + tempoBuscas + " ms\n";
+                        log += "Tempo de Busca por região: " + tempoBuscasRegiao + " ms\n";
                         log += "Número de Comparações: " + arvoreBTeste.getComparacoes() + "\n\n";
                         log += "\n";
 
@@ -264,9 +265,9 @@ public class Main {
                     }
                     log += "Médias \n\n";
 
-                    log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + "\n";
-                    log += "Media de tempo de busca " + mediaTempoBuscas / 5 + "\n";
-                    log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + "\n";
+                    log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + " ms\n";
+                    log += "Media de tempo de busca " + mediaTempoBuscas / 5 + " ms\n";
+                    log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + " ms\n";
                     log += "Media de comparações " + mediaComparacoes / 5 + "\n";
                     log += "\n\n";
                     log += "___________________________________________";
