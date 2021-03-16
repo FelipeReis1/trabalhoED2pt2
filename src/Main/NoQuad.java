@@ -59,7 +59,7 @@ public class NoQuad {
     }
 
     public int getCodigoCidade() {
-        return codigoCidade;
+        return codigoCidade/10;
     }
 
     public void setCodigoCidade(int codigoCidade) {

@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import javafx.scene.control.Tab;
 
-
 class ArvoreAvl {
 
     NoAvl raiz;
@@ -147,32 +146,32 @@ class ArvoreAvl {
 
     }
 
-    void inOrderTransverse() {
-        inOrder(this.raiz);
+    void inOrderTransverse(int nivel) {
+        inOrder(this.raiz, nivel);
     }
 
     void preOrderTransverse() {
         preOrder(this.raiz);
     }
 
-    void posOrderTransverse() {
-        posOrder(this.raiz);
+    void posOrderTransverse(int nivel) {
+        posOrder(this.raiz, nivel);
     }
 
     String posOrderTransverseString() {
         return posOrderString(this.raiz, " ");
     }
 
-    void inOrder(NoAvl no) {
+    void inOrder(NoAvl no, int nivel) {
         if (no == null) {
             return;
         }
         if (no.esq != null) {
-            inOrder(no.esq);
+            inOrder(no.esq, nivel + 1);
         }
         System.out.print(no.chave + " ");
         if (no.dir != null) {
-            inOrder(no.dir);
+            inOrder(no.dir, nivel + 1);
         }
     }
 
@@ -182,11 +181,16 @@ class ArvoreAvl {
             return this.saida += " ";
         }
         if (no.esq != null) {
+            this.saida += " (";
             posOrderString(no.esq, this.saida);
+            this.saida += " )";
         }
         if (no.dir != null) {
+            this.saida += " (";
             posOrderString(no.dir, this.saida);
+            this.saida += " )";
         }
+
         this.saida += no.chave + " ";
         return this.saida;
     }
@@ -200,17 +204,26 @@ class ArvoreAvl {
         preOrder(no.dir);
     }
 
-    void posOrder(NoAvl no) {
+    void posOrder(NoAvl no, int nivel) {
         if (no == null) {
             return;
         }
+
+        System.out.print("(");
         if (no.esq != null) {
-            posOrder(no.esq);
+            posOrder(no.esq, nivel + 1);
         }
         if (no.dir != null) {
-            posOrder(no.dir);
+            posOrder(no.dir, nivel + 1);
         }
+        System.out.print(")");
+
         System.out.print(no.chave + " ");
+//        String tab = new String();
+//        tab = "";
+//        for (int i = 0; i < nivel; i++) {
+//            tab += "\t";
+//        }
     }
 
     public void carregamentoAvl(ArrayList<DadosCovid.Entrada> entradas, TabelaHash tabela) throws ParseException {
@@ -231,7 +244,8 @@ class ArvoreAvl {
     }
 
     void show() {
-        this.inOrderTransverse();
+        int nivel = 0;
+        this.posOrderTransverse(nivel);
     }
 
     void Save(String file_name) throws IOException {
@@ -240,7 +254,7 @@ class ArvoreAvl {
 
         FileWriter fw = new FileWriter(file);
 
-        fw.write("Saída Árvore AVL\n");
+        fw.write("Saída Arvore AVL\n");
         String row = this.posOrderTransverseString();
 
         fw.write(row);
@@ -256,20 +270,33 @@ class ArvoreAvl {
 
     public int contaCasos(NoAvl no, TabelaHash tabela, int codCidade) throws ParseException {
         int casos = 0;
+        comparacoes++;
         if (no == null) {
             return casos;
         }
+        comparacoes++;
         if (tabela.buscaHash(no.chave).getCodCidade() != codCidade) {
-            return casos;
-        }
-        if (no.esq != null) {
-            casos += contaCasos(no.esq, tabela, codCidade);
-        }
-        if (no.dir != null) {
-            casos += contaCasos(no.dir, tabela, codCidade);
-        }
+            comparacoes++;
+            if (no.esq != null) {
+                casos += contaCasos(no.esq, tabela, codCidade);
+            }
+            comparacoes++;
+            if (no.dir != null) {
+                casos += contaCasos(no.dir, tabela, codCidade);
+            }
 
-        return casos + tabela.buscaHash(no.chave).getNumeroCasosDiario();
+            return casos;
+        } else {
+            comparacoes++;
+            if (no.esq != null) {
+                casos += contaCasos(no.esq, tabela, codCidade);
+            }
+            comparacoes++;
+            if (no.dir != null) {
+                casos += contaCasos(no.dir, tabela, codCidade);
+            }
+            return casos + tabela.buscaHash(no.chave).getNumeroCasosDiario();
+        }
     }
 
     public long getComparacoes() {

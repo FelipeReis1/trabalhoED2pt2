@@ -1,0 +1,1213 @@
+Resultado dos experimentos
+
+Inserções árvore AVL
+
+Inserção de 10000 valores
+
+--- Rodada de Inserção 0---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 12066
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 58071
+
+Tempo de Inserções: 108.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 11.0ms
+Número de Comparações: 667038
+
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 4629
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 39834
+
+Tempo de Inserções: 68.0ms
+Tempo de Busca: 1.0ms
+Tempo de Busca por região: 5.0ms
+Número de Comparações: 1334388
+
+
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 3125
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 43767
+
+Tempo de Inserções: 68.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 7.0ms
+Número de Comparações: 2000598
+
+
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 2408
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 43947
+
+Tempo de Inserções: 77.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 5.0ms
+Número de Comparações: 2667110
+
+
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 7284
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 51496
+
+Tempo de Inserções: 73.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 8.0ms
+Número de Comparações: 3333626
+
+
+Médias 
+
+Media de tempo de inserção 78.8
+Media de tempo de busca 0.2
+Media de tempo de busca por região 7.2
+Media de comparações 2000552.0
+
+
+___________________________________________
+
+Inserção de 50000 valores
+
+--- Rodada de Inserção 0---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 12258
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 231871
+
+Tempo de Inserções: 158.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 26.0ms
+Número de Comparações: 6006704
+
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 7285
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 219022
+
+Tempo de Inserções: 138.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 37.0ms
+Número de Comparações: 8675113
+
+
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 8287
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 224061
+
+Tempo de Inserções: 148.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 33.0ms
+Número de Comparações: 11342859
+
+
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 8015
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 232632
+
+Tempo de Inserções: 139.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 36.0ms
+Número de Comparações: 14010445
+
+
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 4676
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 211062
+
+Tempo de Inserções: 129.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 41.0ms
+Número de Comparações: 16687015
+
+
+Médias 
+
+Media de tempo de inserção 142.4
+Media de tempo de busca 0.0
+Media de tempo de busca por região 34.6
+Media de comparações 1.13444272E7
+
+
+___________________________________________
+
+Inserção de 100000 valores
+
+--- Rodada de Inserção 0---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 15818
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 437931
+
+Tempo de Inserções: 249.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 76.0ms
+Número de Comparações: 21879929
+
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 14883
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 471489
+
+Tempo de Inserções: 267.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 77.0ms
+Número de Comparações: 27074768
+
+
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 23892
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 448984
+
+Tempo de Inserções: 249.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 85.0ms
+Número de Comparações: 32283591
+
+
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 36107
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 476399
+
+Tempo de Inserções: 250.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 72.0ms
+Número de Comparações: 37477176
+
+
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 15743
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 445632
+
+Tempo de Inserções: 243.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 77.0ms
+Número de Comparações: 42669796
+
+
+Médias 
+
+Media de tempo de inserção 251.6
+Media de tempo de busca 0.0
+Media de tempo de busca por região 77.4
+Media de comparações 3.2277052E7
+
+
+___________________________________________
+
+Inserção de 500000 valores
+
+--- Rodada de Inserção 0---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 129401
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 2300151
+
+Tempo de Inserções: 1530.0ms
+Tempo de Busca: 2.0ms
+Tempo de Busca por região: 471.0ms
+Número de Comparações: 67985768
+
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 148088
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 2360012
+
+Tempo de Inserções: 1344.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 473.0ms
+Número de Comparações: 93222395
+
+
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 152942
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 2345725
+
+Tempo de Inserções: 1317.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 394.0ms
+Número de Comparações: 118524870
+
+
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 153470
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 2323523
+
+Tempo de Inserções: 1546.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 493.0ms
+Número de Comparações: 143769406
+
+
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 110992
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 2287707
+
+Tempo de Inserções: 1453.0ms
+Tempo de Busca: 1.0ms
+Tempo de Busca por região: 515.0ms
+Número de Comparações: 169032156
+
+
+Médias 
+
+Media de tempo de inserção 1438.0
+Media de tempo de busca 0.6
+Media de tempo de busca por região 469.2
+Media de comparações 1.18506919E8
+
+
+___________________________________________
+
+Inserção de 1000000 valores
+
+--- Rodada de Inserção 0---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 257928
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 4620305
+
+Tempo de Inserções: 3164.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 925.0ms
+Número de Comparações: 219386235
+
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 260228
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 4623332
+
+Tempo de Inserções: 2848.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 933.0ms
+Número de Comparações: 269782032
+
+
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 256427
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 4613783
+
+Tempo de Inserções: 2904.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 918.0ms
+Número de Comparações: 320319686
+
+
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 263737
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 4600914
+
+Tempo de Inserções: 2953.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 921.0ms
+Número de Comparações: 370862984
+
+
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore AVL
+Total casos da nessa Cidade é 245271
+
+Busca de casos por região na árvore AVL
+Total casos da nessa Região é 4631734
+
+Tempo de Inserções: 2988.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 998.0ms
+Número de Comparações: 421282836
+
+
+Médias 
+
+Media de tempo de inserção 2971.4
+Media de tempo de busca 0.0
+Media de tempo de busca por região 939.0
+Media de comparações 3.203267546E8
+
+
+___________________________________________
+
+Inserções árvore B  - Ordem 20
+
+Inserção de 10000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 251
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 43879
+
+Tempo de Inserções: 100.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 72.0ms
+Número de Comparações: 1909633
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 3150
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 44977
+
+Tempo de Inserções: 70.0ms
+Tempo de Busca: 1.0ms
+Tempo de Busca por região: 12.0ms
+Número de Comparações: 3900739
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 2726
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 44652
+
+Tempo de Inserções: 59.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 10.0ms
+Número de Comparações: 5846668
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 2680
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 42141
+
+Tempo de Inserções: 58.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 13.0ms
+Número de Comparações: 7753960
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 8979
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 51565
+
+Tempo de Inserções: 91.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 10.0ms
+Número de Comparações: 9662348
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 75.6
+Media de tempo de busca 0.2
+Media de tempo de busca por região 23.4
+Media de comparações 5814669.6
+
+
+___________________________________________
+
+Inserção de 50000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 10865
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 230240
+
+Tempo de Inserções: 134.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 112.0ms
+Número de Comparações: 19695879
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 7380
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 235137
+
+Tempo de Inserções: 173.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 123.0ms
+Número de Comparações: 29657650
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 6855
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 226869
+
+Tempo de Inserções: 137.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 120.0ms
+Número de Comparações: 39604119
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 20757
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 243336
+
+Tempo de Inserções: 128.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 117.0ms
+Número de Comparações: 49558930
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 20593
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 251418
+
+Tempo de Inserções: 136.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 113.0ms
+Número de Comparações: 59631304
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 141.6
+Media de tempo de busca 0.0
+Media de tempo de busca por região 117.0
+Media de comparações 3.96295764E7
+
+
+___________________________________________
+
+Inserção de 100000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 11918
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 470352
+
+Tempo de Inserções: 260.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 279.0ms
+Número de Comparações: 79397398
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 24209
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 439511
+
+Tempo de Inserções: 267.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 273.0ms
+Número de Comparações: 98913324
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 34566
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 444453
+
+Tempo de Inserções: 330.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 276.0ms
+Número de Comparações: 118451972
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 36893
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 487715
+
+Tempo de Inserções: 209.0ms
+Tempo de Busca: 1.0ms
+Tempo de Busca por região: 260.0ms
+Número de Comparações: 137935886
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 28883
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 469650
+
+Tempo de Inserções: 299.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 270.0ms
+Número de Comparações: 157374620
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 273.0
+Media de tempo de busca 0.2
+Media de tempo de busca por região 271.6
+Media de comparações 1.1841464E8
+
+
+___________________________________________
+
+Inserção de 500000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 120006
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2293265
+
+Tempo de Inserções: 1334.0ms
+Tempo de Busca: 1.0ms
+Tempo de Busca por região: 1111.0ms
+Número de Comparações: 245408214
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 113312
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2307933
+
+Tempo de Inserções: 1352.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 1225.0ms
+Número de Comparações: 335218643
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 124128
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2301918
+
+Tempo de Inserções: 1301.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 1277.0ms
+Número de Comparações: 424758690
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 101921
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2245872
+
+Tempo de Inserções: 1327.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 1197.0ms
+Número de Comparações: 514410323
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 135815
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2276539
+
+Tempo de Inserções: 1358.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 1150.0ms
+Número de Comparações: 603056919
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 1334.4
+Media de tempo de busca 0.2
+Media de tempo de busca por região 1192.0
+Media de comparações 4.245705578E8
+
+
+___________________________________________
+
+Inserção de 1000000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 261408
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4607317
+
+Tempo de Inserções: 2965.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 2181.0ms
+Número de Comparações: 769422577
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 229584
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4609688
+
+Tempo de Inserções: 2907.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 2088.0ms
+Número de Comparações: 934425138
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 244050
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4611854
+
+Tempo de Inserções: 2870.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 2158.0ms
+Número de Comparações: 1103497839
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 260791
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4644570
+
+Tempo de Inserções: 2893.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 2128.0ms
+Número de Comparações: 1271440629
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 257195
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4596018
+
+Tempo de Inserções: 2872.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 2212.0ms
+Número de Comparações: 1438886084
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 2901.4
+Media de tempo de busca 0.0
+Media de tempo de busca por região 2153.4
+Media de comparações 1.1035344534E9
+
+
+___________________________________________
+
+Inserções árvore B  - Ordem 200
+
+Inserção de 10000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 0
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 42391
+
+Tempo de Inserções: 78.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 23.0ms
+Número de Comparações: 1446110426
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 257
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 50294
+
+Tempo de Inserções: 70.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 24.0ms
+Número de Comparações: 1453339475
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 3318
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 46404
+
+Tempo de Inserções: 79.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 24.0ms
+Número de Comparações: 1460407082
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 3423
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 46323
+
+Tempo de Inserções: 70.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 31.0ms
+Número de Comparações: 1467631506
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 3527
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 50498
+
+Tempo de Inserções: 85.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 22.0ms
+Número de Comparações: 1474844803
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 76.4
+Media de tempo de busca 0.0
+Media de tempo de busca por região 24.8
+Media de comparações 1.4604666584E9
+
+
+___________________________________________
+
+Inserção de 50000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 5996
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 222699
+
+Tempo de Inserções: 241.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 331.0ms
+Número de Comparações: 1508799463
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 10922
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 225754
+
+Tempo de Inserções: 247.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 369.0ms
+Número de Comparações: 1543663131
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 24607
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 251236
+
+Tempo de Inserções: 242.0ms
+Tempo de Busca: 2.0ms
+Tempo de Busca por região: 342.0ms
+Número de Comparações: 1578167525
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 8741
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 228939
+
+Tempo de Inserções: 240.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 335.0ms
+Número de Comparações: 1611561999
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 6116
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 217322
+
+Tempo de Inserções: 241.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 343.0ms
+Número de Comparações: 1646104386
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 242.2
+Media de tempo de busca 0.4
+Media de tempo de busca por região 344.0
+Media de comparações 1.5776593008E9
+
+
+___________________________________________
+
+Inserção de 100000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 26704
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 445479
+
+Tempo de Inserções: 563.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 1384.0ms
+Número de Comparações: 1762797829
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 15894
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 441212
+
+Tempo de Inserções: 586.0ms
+Tempo de Busca: 32.0ms
+Tempo de Busca por região: 1044.0ms
+Número de Comparações: 1878982199
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 5359
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 424140
+
+Tempo de Inserções: 575.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 1363.0ms
+Número de Comparações: 1994510084
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 26337
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 469970
+
+Tempo de Inserções: 610.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 1347.0ms
+Número de Comparações: 2110379281
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 15376
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 449315
+
+Tempo de Inserções: 558.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 1363.0ms
+Número de Comparações: 2226435051
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 578.4
+Media de tempo de busca 6.4
+Media de tempo de busca por região 1300.2
+Media de comparações 1.9946208888E9
+
+
+___________________________________________
+
+Inserção de 500000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 110220
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2327524
+
+Tempo de Inserções: 4276.0ms
+Tempo de Busca: 2.0ms
+Tempo de Busca por região: 4321.0ms
+Número de Comparações: 2585318455
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 124800
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2274522
+
+Tempo de Inserções: 4182.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 4740.0ms
+Número de Comparações: 2971822208
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 149496
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2338805
+
+Tempo de Inserções: 4306.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 4822.0ms
+Número de Comparações: 3358437004
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 128611
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2328151
+
+Tempo de Inserções: 4272.0ms
+Tempo de Busca: 2.0ms
+Tempo de Busca por região: 4558.0ms
+Número de Comparações: 3736635940
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 141512
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 2310469
+
+Tempo de Inserções: 4295.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 4524.0ms
+Número de Comparações: 4112684068
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 4266.2
+Media de tempo de busca 0.8
+Media de tempo de busca por região 4593.0
+Media de comparações 3.352979535E9
+
+
+___________________________________________
+
+Inserção de 1000000 valores
+
+--- Rodada de Inserção 1---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 265578
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4627543
+
+Tempo de Inserções: 9938.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 9074.0ms
+Número de Comparações: 4885318070
+
+
+------------------------------------
+--- Rodada de Inserção 2---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 251678
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4607037
+
+Tempo de Inserções: 9945.0ms
+Tempo de Busca: 3.0ms
+Tempo de Busca por região: 9213.0ms
+Número de Comparações: 5662718837
+
+
+------------------------------------
+--- Rodada de Inserção 3---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 260286
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4614047
+
+Tempo de Inserções: 9957.0ms
+Tempo de Busca: 0.0ms
+Tempo de Busca por região: 9615.0ms
+Número de Comparações: 6446057062
+
+
+------------------------------------
+--- Rodada de Inserção 4---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 255382
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4613639
+
+Tempo de Inserções: 10087.0ms
+Tempo de Busca: 2.0ms
+Tempo de Busca por região: 9724.0ms
+Número de Comparações: 7226577217
+
+
+------------------------------------
+--- Rodada de Inserção 5---
+Busca da cidade 355030 na árvore B
+Total casos da nessa Cidade é 251140
+
+Busca de casos por região na árvore B
+Total casos da nessa Região é 4618379
+
+Tempo de Inserções: 11611.0ms
+Tempo de Busca: 2.0ms
+Tempo de Busca por região: 9113.0ms
+Número de Comparações: 8010611717
+
+
+------------------------------------
+Médias 
+
+Media de tempo de inserção 10307.6
+Media de tempo de busca 1.4
+Media de tempo de busca por região 9347.8
+Media de comparações 6.4462565806E9
+
+
+___________________________________________
+

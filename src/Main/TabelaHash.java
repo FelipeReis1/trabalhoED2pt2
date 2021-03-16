@@ -17,12 +17,11 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.Random;
 
-
 public class TabelaHash {
 
     private float colisoes;
     private int tamTabela;
-    protected NoHash[] tabela;
+    protected NoHash[] tabela, tabelaAux;
     private int tamMaximo = 4096;
     private ArrayList<Integer> indices = new ArrayList();
 
@@ -40,15 +39,16 @@ public class TabelaHash {
                 break;
             }
         }
-        System.out.println(this.tamTabela + "oi");
         this.colisoes = 0;
         this.tabela = new NoHash[this.tamTabela];
+        this.tabelaAux = new NoHash[this.tamTabela];
     }
 
     public TabelaHash() {
         this.colisoes = 0;
         this.tamTabela = 1860941;
         this.tabela = new NoHash[this.tamTabela];
+        this.tabelaAux = new NoHash[this.tamTabela];
     }
 
     public void carregamentoTabelaHash(ArrayList<DadosCovid.Entrada> entradasHash) throws IOException, ParseException {
@@ -81,7 +81,7 @@ public class TabelaHash {
 
         for (int i = 0; i < tabela.length; i++) {
             if (tabela[i] != null) {
-                System.out.print("Índice " + i + ": ");
+                System.out.print("Indice " + i + ": ");
                 System.out.print(formato.format(tabela[i].getDtConfirmacao()) + " ");
                 System.out.print(tabela[i].getEstado() + " ");
                 System.out.print(tabela[i].getCidade() + " ");
@@ -147,21 +147,20 @@ public class TabelaHash {
 
     public int getHash(NoHash no) throws ParseException {
         int id = hash1(no) % this.tamTabela;
-        if (this.tabela[id] == null) {
-            this.tabela[id] = no;
+        if (this.tabelaAux[id] == null) {
+            this.tabelaAux[id] = no;
 
         } else {
             int i = 1;
             id = (hash1(no) + i * i) % this.tamTabela;
-            while (this.tabela[id] != null) {
+            while (this.tabelaAux[id] != null) {
                 colisoes++;
                 i++;
                 id = (hash1(no) + i * i) % this.tamTabela;
             }
-            this.tabela[id] = no;
+            this.tabelaAux[id] = no;
 
         }
-        indices.add(id);
         return id;
     }
 

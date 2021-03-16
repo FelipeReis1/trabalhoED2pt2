@@ -22,15 +22,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException, ParseException {
-
 //        Leitura dos Dataset e Armazenamento em ArrayList para etapas 1 e 2 
         String caminhoCsvProcessado = "brazil_covid19_cities_processado.csv";
         String caminhoCsvCoordenadas = "brazil_cities_coordinates.csv";
         DadosCovid dadosCidade = new DadosCovid(caminhoCsvCoordenadas, 1);
         DadosCovid dadosCasos = new DadosCovid(caminhoCsvProcessado, 2);
 
+        //        Etapa 4
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Selecione a operação desejada:\n");
         System.out.println("1 - Executar Trabalho; \n");
         System.out.println("2 - Inserção de cidades na quad tree; \n");
@@ -43,7 +42,6 @@ public class Main {
             System.out.println("Digite o número de chaves: \n");
             numChaves = scanner.nextInt();
         }
-//        Etapa 4
         switch (operacao) {
             case 1:
 //        Etapa 1
@@ -55,17 +53,22 @@ public class Main {
                 tabelaHash.carregamentoTabelaHash(dadosCasos.getEntradas());
 
 //        Etapa 3
-                ArvoreAvl arvoreAvl = new ArvoreAvl();
-                ArvoreB arvoreB = new ArvoreB(20);
-                ArvoreB arvoreB200 = new ArvoreB(200);
+//                ArvoreAvl arvoreAvl = new ArvoreAvl();
+//                ArvoreB arvoreB = new ArvoreB(20);
+//                ArvoreB arvoreB200 = new ArvoreB(200);
 //        Etapa 5
-                String log = new String();
-
-//                S1
+//            -------------TESTES------------------------------------------
+//                arvoreAvl.carregamentoAvl(dadosCasos.getEntradas(), tabelaHash);
+//                exibirResultadoArvoreB(arvoreB);
+//                System.out.println("oi\n\n");
+//                arvoreAvl.carregamentoAvl(dadosCasos.getEntradas(), tabelaHash);
+//                System.out.println("Total casos da nessa Cidade é " + arvoreB.getTotalCasosCidade(313670, tabelaHash) );
+//            -------------TESTES------------------------------------------
+////                S1
                 System.out.println("Digite o código da cidade:\n");
                 int codCidade = scanner.nextInt();
-
-//                S2
+//
+////                S2
                 double x0;
                 double y0;
                 double x1;
@@ -96,6 +99,8 @@ public class Main {
                 valores[3] = 500000;
                 valores[4] = 1000000;
 
+                String log = new String();
+
                 System.out.println("Inserções árvore AVL");
                 log += "Inserções árvore AVL\n\n";
                 for (int n : valores) {
@@ -106,9 +111,9 @@ public class Main {
                     double mediaTempoRegiao = 0;
                     for (int m = 0; m < 5; m++) {
                         ArvoreAvl arvoreAvlTeste = new ArvoreAvl();
-                        long tempoBuscas, tempoInsercoes, tempoBuscasRegiao;
-                        
-                        long startTimeIn = System.currentTimeMillis();
+                        double tempoBuscas, tempoInsercoes, tempoBuscasRegiao;
+
+                        double startTimeIn = System.currentTimeMillis();
                         for (int id : tabelaHash.getIndicesAleatorios(n)) {
                             arvoreAvlTeste.inserir(id, tabelaHash.buscaHash(id).getCodCidade(), tabelaHash.buscaHash(id).getDtConfirmacao(), tabelaHash);
                         }
@@ -116,30 +121,30 @@ public class Main {
 
                         log += "--- Rodada de Inserção " + m + "---\n";
 
-                        long startTimeBu = System.currentTimeMillis();
+                        double startTimeBu = System.currentTimeMillis();
                         log += "Busca da cidade " + codCidade + " na árvore AVL\n";
-                        log += "Total casos da nessa Cidade é " + arvoreAvl.getTotalCasosCidade(codCidade, tabelaHash) + "\n\n";
+                        log += "Total casos da nessa Cidade é " + arvoreAvlTeste.getTotalCasosCidade(codCidade, tabelaHash) + "\n\n";
                         tempoBuscas = System.currentTimeMillis() - startTimeBu;
 
-                        long startTimeS2 = System.currentTimeMillis();
+                        double startTimeS2 = System.currentTimeMillis();
                         log += "Busca de casos por região na árvore AVL\n";
                         int totalCasos = 0;
                         for (NoQuad no : saida) {
-                            totalCasos += arvoreAvl.getTotalCasosCidade(no.getCodigoCidade(), tabelaHash);
+                            totalCasos += arvoreAvlTeste.getTotalCasosCidade(no.getCodigoCidade(), tabelaHash);
                         }
                         log += "Total casos da nessa Região é " + totalCasos + "\n\n";
                         tempoBuscasRegiao = System.currentTimeMillis() - startTimeS2;
-                        
+
                         log += "Tempo de Inserções: " + (float) tempoInsercoes + "ms\n";
-                        log += "Tempo de Busca: " + (float)tempoBuscas + "ms\n";
-                        log += "Tempo de Busca por região: " + (float)tempoBuscasRegiao + "ms\n";
-                        log += "Número de Comparações: " + arvoreAvl.getComparacoes() + "\n\n";
+                        log += "Tempo de Busca: " + (float) tempoBuscas + "ms\n";
+                        log += "Tempo de Busca por região: " + (float) tempoBuscasRegiao + "ms\n";
+                        log += "Número de Comparações: " + arvoreAvlTeste.getComparacoes() + "\n\n";
                         log += "\n";
 
                         mediaTempoInsercao += tempoInsercoes;
                         mediaTempoRegiao += tempoBuscasRegiao;
                         mediaTempoBuscas += tempoBuscas;
-                        mediaComparacoes += arvoreAvl.getComparacoes();
+                        mediaComparacoes += arvoreAvlTeste.getComparacoes();
 
                     }
                     log += "Médias \n\n";
@@ -151,9 +156,122 @@ public class Main {
                     log += "\n\n";
                     log += "___________________________________________";
                     log += "\n\n";
+                }
+                System.out.println("Inserções árvore B - Ordem 20");
+                log += "Inserções árvore B  - Ordem 20\n\n";
+                for (int n : valores) {
+                    log += "Inserção de " + n + " valores\n\n";
+                    double mediaTempoInsercao = 0;
+                    double mediaTempoBuscas = 0;
+                    double mediaComparacoes = 0;
+                    double mediaTempoRegiao = 0;
+                    for (int m = 0; m < 5; m++) {
+                        ArvoreB arvoreBTeste = new ArvoreB(20);
+                        double tempoBuscas, tempoInsercoes, tempoBuscasRegiao;
 
+                        double startTimeIn = System.currentTimeMillis();
+                        for (int id : tabelaHash.getIndicesAleatorios(n)) {
+                            arvoreBTeste.inserir(id, tabelaHash.buscaHash(id).getCodCidade(), tabelaHash.buscaHash(id).getDtConfirmacao(), tabelaHash);
+                        }
+                        tempoInsercoes = System.currentTimeMillis() - startTimeIn;
+
+                        log += "--- Rodada de Inserção " + (m + 1) + "---\n";
+
+                        double startTimeBu = System.currentTimeMillis();
+                        log += "Busca da cidade " + codCidade + " na árvore B\n";
+                        log += "Total casos da nessa Cidade é " + arvoreBTeste.getTotalCasosCidade(codCidade, tabelaHash) + "\n\n";
+                        tempoBuscas = System.currentTimeMillis() - startTimeBu;
+
+                        double startTimeS2 = System.currentTimeMillis();
+                        log += "Busca de casos por região na árvore B\n";
+                        int totalCasos = 0;
+                        for (NoQuad no : saida) {
+                            totalCasos += arvoreBTeste.getTotalCasosCidade(no.getCodigoCidade(), tabelaHash);
+                        }
+                        log += "Total casos da nessa Região é " + totalCasos + "\n\n";
+                        tempoBuscasRegiao = System.currentTimeMillis() - startTimeS2;
+
+                        log += "Tempo de Inserções: " + tempoInsercoes + "ms\n";
+                        log += "Tempo de Busca: " + tempoBuscas + "ms\n";
+                        log += "Tempo de Busca por região: " + tempoBuscasRegiao + "ms\n";
+                        log += "Número de Comparações: " + arvoreBTeste.getComparacoes() + "\n\n";
+                        log += "\n";
+
+                        mediaTempoInsercao += tempoInsercoes;
+                        mediaTempoRegiao += tempoBuscasRegiao;
+                        mediaTempoBuscas += tempoBuscas;
+                        mediaComparacoes += arvoreBTeste.getComparacoes();
+                        log += "------------------------------------\n";
+
+                    }
+                    log += "Médias \n\n";
+
+                    log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + "\n";
+                    log += "Media de tempo de busca " + mediaTempoBuscas / 5 + "\n";
+                    log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + "\n";
+                    log += "Media de comparações " + mediaComparacoes / 5 + "\n";
+                    log += "\n\n";
+                    log += "___________________________________________";
+                    log += "\n\n";
                 }
 
+                System.out.println("Inserções árvore B - Ordem 200");
+                log += "Inserções árvore B  - Ordem 200\n\n";
+                for (int n : valores) {
+                    log += "Inserção de " + n + " valores\n\n";
+                    double mediaTempoInsercao = 0;
+                    double mediaTempoBuscas = 0;
+                    double mediaComparacoes = 0;
+                    double mediaTempoRegiao = 0;
+                    for (int m = 0; m < 5; m++) {
+                        ArvoreB arvoreBTeste = new ArvoreB(200);
+                        double tempoBuscas, tempoInsercoes, tempoBuscasRegiao;
+
+                        double startTimeIn = System.currentTimeMillis();
+                        for (int id : tabelaHash.getIndicesAleatorios(n)) {
+                            arvoreBTeste.inserir(id, tabelaHash.buscaHash(id).getCodCidade(), tabelaHash.buscaHash(id).getDtConfirmacao(), tabelaHash);
+                        }
+                        tempoInsercoes = System.currentTimeMillis() - startTimeIn;
+
+                        log += "--- Rodada de Inserção " + (m + 1) + "---\n";
+
+                        double startTimeBu = System.currentTimeMillis();
+                        log += "Busca da cidade " + codCidade + " na árvore B\n";
+                        log += "Total casos da nessa Cidade é " + arvoreBTeste.getTotalCasosCidade(codCidade, tabelaHash) + "\n\n";
+                        tempoBuscas = System.currentTimeMillis() - startTimeBu;
+
+                        double startTimeS2 = System.currentTimeMillis();
+                        log += "Busca de casos por região na árvore B\n";
+                        int totalCasos = 0;
+                        for (NoQuad no : saida) {
+                            totalCasos += arvoreBTeste.getTotalCasosCidade(no.getCodigoCidade(), tabelaHash);
+                        }
+                        log += "Total casos da nessa Região é " + totalCasos + "\n\n";
+                        tempoBuscasRegiao = System.currentTimeMillis() - startTimeS2;
+
+                        log += "Tempo de Inserções: " + tempoInsercoes + "ms\n";
+                        log += "Tempo de Busca: " + tempoBuscas + "ms\n";
+                        log += "Tempo de Busca por região: " + tempoBuscasRegiao + "ms\n";
+                        log += "Número de Comparações: " + arvoreBTeste.getComparacoes() + "\n\n";
+                        log += "\n";
+
+                        mediaTempoInsercao += tempoInsercoes;
+                        mediaTempoRegiao += tempoBuscasRegiao;
+                        mediaTempoBuscas += tempoBuscas;
+                        mediaComparacoes += arvoreBTeste.getComparacoes();
+                        log += "------------------------------------\n";
+
+                    }
+                    log += "Médias \n\n";
+
+                    log += "Media de tempo de inserção " + mediaTempoInsercao / 5 + "\n";
+                    log += "Media de tempo de busca " + mediaTempoBuscas / 5 + "\n";
+                    log += "Media de tempo de busca por região " + mediaTempoRegiao / 5 + "\n";
+                    log += "Media de comparações " + mediaComparacoes / 5 + "\n";
+                    log += "\n\n";
+                    log += "___________________________________________";
+                    log += "\n\n";
+                }
                 salvarArquivo(log);
                 break;
 
@@ -199,14 +317,14 @@ public class Main {
                 for (int i = 0; i < numChaves; i++) {
                     amostrasAvl.add(entradasAvl.get(i));
                 }
-
+                tabelaAux.carregamentoTabelaHash(amostrasAvl);
                 arvoreAvlTeste.carregamentoAvl(amostrasAvl, tabelaAux);
 
                 exibirResultadoArvoreAvl(arvoreAvlTeste);
                 System.out.println("\n\n");
                 break;
             case 5:
-                ArvoreB arvoreBTeste = new ArvoreB(20);
+                ArvoreB arvoreBTeste = new ArvoreB(4);
                 TabelaHash tabelaAuxB = new TabelaHash(numChaves);
 
                 ArrayList<DadosCovid.Entrada> entradasB = dadosCasos.getEntradas();
@@ -216,9 +334,8 @@ public class Main {
                 for (int i = 0; i < numChaves; i++) {
                     amostrasB.add(entradasB.get(i));
                 }
-
+                tabelaAuxB.carregamentoTabelaHash(amostrasB);
                 arvoreBTeste.carregamentoB(amostrasB, tabelaAuxB);
-
                 exibirResultadoArvoreB(arvoreBTeste);
                 System.out.println("\n\n");
 

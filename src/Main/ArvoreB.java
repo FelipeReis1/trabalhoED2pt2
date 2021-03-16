@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.xml.transform.Source;
 
 public class ArvoreB {
 
@@ -21,6 +22,7 @@ public class ArvoreB {
     ArvoreB[] arrayFilhos;
     NoB[] arrayChaves;
     static String saida = new String();
+    static long comparacoes = 0;
 
     public ArvoreB(int grau_min) {
         this.grau_min = grau_min;
@@ -147,22 +149,26 @@ public class ArvoreB {
         }
     }
 
-    public int busca(int chave) {
-        return busca(this.raiz, chave);
+    public ArvoreB busca(int codCidade, TabelaHash tabela) throws ParseException {
+        return busca(this.raiz, codCidade, tabela);
     }
 
-    public int busca(ArvoreB raiz, int k) {
+    public ArvoreB busca(ArvoreB raiz, int codCidade, TabelaHash tabela) throws ParseException {
         if (raiz == null) {
-            return -1;
+            return null;
         }
         int i = 0;
-        while ((i < raiz.n) && k > raiz.arrayChaves[i].chave) {
+        addComparacoes(2);
+        while ((i < raiz.n) && codCidade > tabela.buscaHash(raiz.arrayChaves[i].chave).getCodCidade()) {
+            addComparacoes(2);
             i++;
         }
-        if ((i < raiz.n) && (raiz.arrayChaves[i] != null) && k == raiz.arrayChaves[i].chave) {
-            return raiz.arrayChaves[i].chave;
+
+        addComparacoes(2);
+        if ((i < raiz.n) && (raiz.arrayChaves[i] != null) && codCidade == tabela.buscaHash(raiz.arrayChaves[i].chave).getCodCidade()) {
+            return raiz;
         }
-        return busca(raiz.arrayFilhos[i], k);
+        return busca(raiz.arrayFilhos[i], codCidade, tabela);
     }
 
     public void traverse() {
@@ -178,6 +184,7 @@ public class ArvoreB {
             return;
         }
         int i;
+        System.out.print("(");
         for (i = 0; i < raiz.n; i++) {
             if (raiz.arrayFilhos[i] != null) {
                 inOrder(raiz.arrayFilhos[i]);
@@ -189,6 +196,7 @@ public class ArvoreB {
         if (raiz.arrayFilhos[i] != null) {
             inOrder(raiz.arrayFilhos[i]);
         }
+        System.out.print(")");
     }
 
     public String inOrderString(ArvoreB raiz, String str) {
@@ -212,8 +220,10 @@ public class ArvoreB {
     }
 
     public void carregamentoB(ArrayList<DadosCovid.Entrada> entradas, TabelaHash tabela) throws ParseException {
+
         for (DadosCovid.Entrada entrada : entradas) {
             NoHash no = new NoHash();
+
             no.setDtConfirmacao(entrada.getDtConfirmacao());
             no.setEstado(entrada.getEstado());
             no.setCidade(entrada.getCidade());
@@ -239,7 +249,7 @@ public class ArvoreB {
 
         FileWriter fw = new FileWriter(file);
 
-        fw.write("Saída Árvore B\n");
+        fw.write("Saída Arvore B\n");
         String row = this.transverseString();
 
         fw.write(row);
@@ -247,6 +257,57 @@ public class ArvoreB {
         fw.flush();
         fw.close();
 
+    }
+
+    int getTotalCasosCidade(int codCidade, TabelaHash tabela) throws ParseException {
+        ArvoreB no = this.busca(codCidade, tabela);
+        return contaCasos(no, codCidade, tabela);
+    }
+
+    int contaCasos(ArvoreB raiz, int codCidade, TabelaHash tabela) throws ParseException {
+        int casos = 0;
+        addComparacoes(1);
+        if (raiz == null) {
+            return casos;
+        }
+
+        int i;
+
+        for (i = 0; i < raiz.n; i++) {
+            addComparacoes(1);
+            if (raiz.arrayFilhos[i] != null) {
+                casos += contaCasos(raiz.arrayFilhos[i], codCidade, tabela);
+            }
+        }
+        addComparacoes(1);
+        if (raiz.arrayFilhos[i] != null) {
+            casos += contaCasos(raiz.arrayFilhos[i], codCidade, tabela);
+        }
+
+        for (i = 0; i < raiz.n; i++) {
+            addComparacoes(1);
+            if (raiz.arrayChaves[i] != null) {
+                addComparacoes(1);
+                if (tabela.buscaHash(raiz.arrayChaves[i].chave).getCodCidade() == codCidade) {
+                    casos += tabela.buscaHash(raiz.arrayChaves[i].chave).getNumeroCasosDiario();
+                }
+
+            }
+        }
+
+        return casos;
+    }
+
+    public static long getComparacoes() {
+        return comparacoes;
+    }
+
+    public static void setComparacoes(long comparacoes) {
+        ArvoreB.comparacoes = comparacoes;
+    }
+
+    public static void addComparacoes(int i) {
+        ArvoreB.comparacoes += i;
     }
 
 }
